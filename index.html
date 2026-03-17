@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería Interactiva - u4</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Interactiva — U4</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header> 
-    <h1>Galería Interactiva</h1> 
-  </header> 
- 
-  <!-- Controles para agregar tarjetas -->
-  <section id="controles"> 
-    <input type="text" id="input-titulo"       
-    placeholder="Título de la tarjeta"> 
+<header class="header">
+  <h1 class="header__title">Galería Interactiva</h1>
+</header>
 
-    <input type="text" id="input-descripcion"  
-    placeholder="Descripción">    
+<main class="main">
 
-    <select id="select-categoria"> 
-      <option value="tecnologia">Tecnología</option> 
-      <option value="ciencia">Ciencia</option> 
-      <option value="arte">Arte</option> 
-    </select> 
+  <!-- Formulario -->
+  <section class="controls">
+    <input class="controls__input" type="text" id="input-titulo" placeholder="Título">
+    <input class="controls__input" type="text" id="input-descripcion" placeholder="Descripción">
 
-    <button id="btn-agregar">Agregar Tarjeta</button>   
-</section> 
- 
-  <!-- Botones de filtro -->
-  <section id="filtros"> 
-    
-    <button class="btn-filtro" data-categoria="todas">Todas</button> 
-    <button class="btn-filtro" data-categoria="tecnologia">Tecnología</button> 
-    <button class="btn-filtro" data-categoria="ciencia">Ciencia</button> 
-    <button class="btn-filtro" data-categoria="arte">Arte</button>   
-</section> 
-  
-  <!-- Contenedor de la galería -->
-   <main id="galeria"></main>
- 
-  <script src="app.js" defer></script>
+    <select class="controls__select" id="select-categoria">
+      <option value="tecnologia">Tecnología</option>
+      <option value="ciencia">Ciencia</option>
+      <option value="arte">Arte</option>
+    </select>
 
-</body> 
-</html> 
+    <button class="controls__button" id="btn-agregar">Agregar</button>
+  </section>
 
+  <!-- Filtros -->
+  <section class="filters" id="filtros">
+    <button class="filters__btn activo" data-categoria="todas">Todas</button>
+    <button class="filters__btn" data-categoria="tecnologia">Tecnología</button>
+    <button class="filters__btn" data-categoria="ciencia">Ciencia</button>
+    <button class="filters__btn" data-categoria="arte">Arte</button>
+  </section>
+
+  <!-- Contador -->
+  <section class="counter">
+    <p id="contador">Mostrando 0 tarjeta(s)</p>
+  </section>
+
+  <!-- Galería -->
+  <section class="gallery" id="galeria"></section>
+
+</main>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
